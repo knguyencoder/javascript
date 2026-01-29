@@ -269,13 +269,13 @@ footer a:focus  { color:#f5a666; }
 /* Top nav links: force same orange as footer */
 .site-nav .site-nav__link:link,
 .site-nav .site-nav__link:visited {
-  color: #f97316;           /* orange */
+  color: #f97316 !important;           /* orange */
   text-decoration: none;
 }
 .site-nav .site-nav__link:hover,
 .site-nav .site-nav__link:focus {
-  color: #f5a666;           /* lighter orange */
-  text-decoration: none;
+  color: #f5a666 !important;           /* lighter orange */
+  text-decoration: underline;
 }
 
 
