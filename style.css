@@ -1,0 +1,309 @@
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Base colors */
+  --bg: #f7f7f7;
+  --text: #111827;
+
+  /* Header */
+  --header-bg: #1f2937;
+  --header-fg: #ffffff;
+
+  /* Footer */
+  --footer-bg: #0f172a;
+  --footer-fg: #e5e7eb;
+
+  /* Links */
+  --link: #1d4ed8;
+  --link-visited: #ff6a00;
+  --link-hover: #f5a666;
+
+  /* Font */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial,
+               "Apple Color Emoji", "Segoe UI Emoji";
+
+  --container-max: 1100px;
+  --gutter: 16px;
+  --nav-h: 56px;
+  --toc-w: 260px;
+  --toc-top: 40px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 1.5rem 1rem;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--header-bg);
+  color: var(--header-fg);
+  padding: 1rem 1rem;
+}
+
+/* Skip link (a11y) */
+.skip-link {
+  position: absolute; left: -9999px; top: auto;
+  width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed; left: 16px; top: 8px; z-index: 2000;
+  width: auto; height: auto; padding: 8px 12px; background: #fff; border: 1px solid #ccc;
+}
+
+/* Header & logo */
+.page-header {
+  position: relative;
+  min-height: 100px;
+  z-index: 500;
+  margin-top: -16px;
+}
+.page-header__brand { max-width: var(--container-max); margin: 0 auto; padding: 16px; }
+
+.logo {
+  position: absolute;
+  top: calc(var(--nav-h));
+  left: 80px;
+  height: 72px; width: auto; object-fit: contain;
+  z-index: 1200; 
+}
+
+/* Fixed top navigation */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  
+  background: var(--header-bg);
+  color: var(--header-fg);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.site-nav__link {
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+/* Sign In button */
+.nav-signin {
+  position: absolute;
+  right: 30px;               
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+.nav-signin:hover {
+  background-color: #1e40af;
+  transform: translateY(calc(-50% - 1px));
+}
+.page {
+  padding-top: var(--nav-h);
+}
+/* Main layout */
+.layout { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--gutter); }
+.flow::after { content: ""; display: table; clear: both; }
+
+/* TOC */
+.toc {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  float: right;
+  width: var(--toc-w);
+  margin: 20px 16px 16px;
+  position: sticky;
+  top: calc(var(--nav-h) + var(--toc-top));
+}
+.toc__title { margin: 0 0 8px 0; }
+.toc__list { margin: 0; padding-left: 18px; }
+
+/* TOC links */
+.toc a:link,
+.toc a:visited { color: #AD0028; }
+.toc a:hover,
+.toc a:focus  { color: #91505f; }
+
+/* TOC list keeps bullets */
+main nav[aria-label] ul { list-style: disc; }
+
+/* Content column TOC */
+.content {
+  margin-right: calc(var(--toc-w) + 60px);
+  display: flow-root;         
+}
+
+/* Sections */
+.section { margin: 32px 0; }
+.section__title { margin-top: 0; }
+
+
+/* Center all image captions */
+.figure__cap,
+figcaption {
+  text-align: center;    /* Centered caption */
+  display: block;
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: #444;
+  opacity: 0.85;
+}
+
+/* ====== FOOTER  ====== */
+.site-footer{
+  padding-top: 24px;
+  padding-bottom: 28px;
+  margin-top: 16px;
+}
+.footer-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+.footer-col{
+  flex: 1 1 240px;
+}
+.footer-title{
+  margin: 0 0 8px;
+  font-size: .95rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #ffffff;
+}
+.footer-center{ text-align: center; }
+
+.page-footer {
+  background: var(--footer-bg);
+  color: var(--footer-fg);
+  padding: 1rem 1rem;
+}
+.page-footer a { color: #bfdbfe; }
+.page-footer a:hover { color: #93c5fd; }
+
+/* Centered media (About) */
+.centered-media { text-align: center; margin: 0 auto 1.25rem; }
+.centered-media .figure__img,
+.centered-media img { display: inline-block; max-width: 100%; height: auto; }
+
+/* Align right-side images in Identity and Journey sections */
+.same-line {
+  float: right;
+  margin: 0 0 10px 24px;  /* same spacing for both */
+  clear: right;           /* ensure they line up vertically */
+  width: 320px;       /* keep consistent width */
+}
+
+/* ---------- Typography ---------- */
+h1 { font-size: 2rem; line-height: 1.25; }
+h2 { font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1.25rem; }
+p  { font-size: 1rem; }
+
+/* ---------- Lists ---------- */
+ul, ol { padding-left: 1.25rem; margin-block: 0.75rem; }
+
+
+/* ---------- Links ---------- */
+a:link    { color: var(--link); text-decoration: underline; }
+a:visited { color: var(--link-visited); }
+a:hover   { color: var(--link-hover); }
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ---------- Text helpers ---------- */
+.lead  { font-size: 1.125rem; line-height: 1.7; }
+.muted { color: #4b5563; }
+.note  { font-style: italic; }
+
+/* ---------- Header link colors ---------- */
+header a:link,
+header a:visited { color:#f97316; }
+header a:hover,
+header a:focus  { color:#f5a666; }
+
+/* ---------- Footer link colors ---------- */
+footer a:link,
+footer a:visited { color:#f97316; }
+footer a:hover,
+footer a:focus  { color:#f5a666; }
+
+
+/* Top nav links: force same orange as footer */
+.site-nav .site-nav__link:link,
+.site-nav .site-nav__link:visited {
+  color: #f97316;           /* orange */
+  text-decoration: none;
+}
+.site-nav .site-nav__link:hover,
+.site-nav .site-nav__link:focus {
+  color: #f5a666;           /* lighter orange */
+  text-decoration: none;
+}
+
+
+
+/* Override W3.CSS font so it uses my site font */
+html, body {
+  font-family: var(--font-sans) !important;
+}
+
+.w3-container,
+.w3-card,
+.w3-input,
+.w3-button,
+.w3-bar,
+.w3-ul,
+.w3-table,
+.w3-theme,
+.w3-theme-d3 {
+  font-family: inherit !important;
+}
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Visitor name from JavaScript */
+#welcomeName {
+  font-weight: 800;
+  text-decoration: underline;
+}
