@@ -2,13 +2,13 @@
 
 const questions = [
   "What is the capital of Texas?",
-  "What animal of the year is 2026?",
+  "What do bees make",
   "What do you use to write on a whiteboard?"
 ];
 
 const answers = [
   "austin",
-  "horse",
+  "honey",
   "marker"
 ];
 
@@ -47,15 +47,12 @@ function quiz() {
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-  console.log("quiz.js loaded");
 
   const score = quiz();
 
   const resultBox = document.getElementById("resultBox");
   const scoreEl = document.getElementById("finalScore");
 
-  console.log("resultBox:", resultBox);
-  console.log("finalScore:", scoreEl);
 
   if (!resultBox || !scoreEl) {
     alert("Missing resultBox or finalScore in quiz.html");
