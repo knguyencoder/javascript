@@ -2,7 +2,7 @@
 
 const questions = [
   "What is the capital of Texas?",
-  "What do bees make",
+  "What do bees make?",
   "What do you use to write on a whiteboard?"
 ];
 
