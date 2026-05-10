@@ -3,14 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Duy Nguyen">
     <meta name="description" content="This page includes content assisted by AI tools.">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
+
     <title>Duy Nguyen - Homepage</title>
 </head>
 
@@ -19,7 +23,8 @@
 
     <div class="page w3-theme-l5">
         <header class="page-header w3-container w3-center w3-padding-32" aria-label="Site header">
-            <img src="images/logo.png" alt="Site logo" class="logo" >
+            <img src="images/logo.png" alt="Site logo" class="logo">
+
             <section class="page-header__brand">
                 <h1 style="font-weight: bolder" class="w3-text-white">
                     Welcome, <span id="welcomeName">friend</span> to my homepage!!
@@ -33,12 +38,18 @@
 
         <nav class="site-nav w3-bar w3-theme-blue-grey" aria-label="Primary">
             <ul class="site-nav__list">
-                <li><a href="index.html" aria-current="page" class="site-nav__link">Home</a></li>
+                <li>
+                    <a href="index.html" aria-current="page" class="site-nav__link">Home</a>
+                </li>
+                <li><a href="about-us.html" class="site-nav__link">About Us</a></li>
                 <li><a href="quotes.html" class="site-nav__link">Quotes</a></li>
-                <li><A href="secret-number-game.html" class="site-nav__link">Game</A></li>
-                <li><A href="quiz.html" class="site-nav__link">Quiz</A></li>
+                <li>
+                    <a href="secret-number-game.html" class="site-nav__link">Game</a>
+                </li>
+                <li><a href="quiz.html" class="site-nav__link">Quiz</a></li>
                 <li><a href="trivia.html" class="site-nav__link">Trivia</a></li>
             </ul>
+
             <a class="nav-signin" href="#" role="button">Sign In</a>
         </nav>
 
@@ -76,6 +87,7 @@
                         Also I often listen to music and exercise with my dad every
                         afternoon.
                     </p>
+
                     <p>
                         My interest in technology began when I was just a kid. Back then,
                         my family owned an internet cafe, which gave me early access to
@@ -108,10 +120,9 @@
                         everything step by step. I don't have a strong background in
                         coding yet, but I'm trying my best. I enjoy the process of
                         figuring things out—like how tags work, what each part of a
-                        webpage does, and how everything connects together. It feels good
-                        when something finally clicks after struggling with it for a
-                        while.
+                        webpage does, and how everything connects together.
                     </p>
+
                     <p>
                         I see myself as a quiet learner. I don't always speak up in class
                         or know all the answers, but I care about doing things properly.
@@ -147,10 +158,12 @@
                         about creating page structure and controlling the layout and
                         design.
                     </p>
+
                     <p>
                         Now, I am starting to learn JavaScript, which helps me make my
                         pages more interactive and dynamic.
                     </p>
+
                     <p>
                         My professional goal is to become a front-end web developer who
                         can build clean, responsive, and user-friendly websites. I want to
@@ -165,7 +178,6 @@
 
         <footer class="page-footer site-footer">
             <div class="footer-grid w3-padding-16">
-                <!-- Left column -->
                 <nav class="footer-col" aria-label="Resources">
                     <h3 class="footer-title">Resources</h3>
                     <ul>
@@ -177,7 +189,6 @@
                     </ul>
                 </nav>
 
-                <!-- Center column -->
                 <div class="footer-col footer-center">
                     <p>&copy; <time datetime="2026">2026</time> Duy Nguyen</p>
                     <p>
@@ -185,11 +196,11 @@
                     </p>
                 </div>
 
-                <!-- Right column -->
                 <nav class="footer-col" aria-label="Site">
-                    <h4 class="footer-title">Site</h4>
+                    <h3 class="footer-title">Site</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
                         <li><a href="quotes.html">Quotes</a></li>
                         <li><a href="secret-number-game.html">Game</a></li>
                         <li><a href="quiz.html">Quiz</a></li>
@@ -198,9 +209,7 @@
                 </nav>
             </div>
 
-            <p>
-                Last updated on <time datetime="2026-01-28">January 28, 2026</time>
-            </p>
+            <p>Last updated on <time datetime="2026-05-09">May 9, 2026</time></p>
         </footer>
     </div>
 </body>

@@ -13,7 +13,7 @@
   --footer-fg: #e5e7eb;
 
   /* Links */
-  --link: #1d4ed8;
+  --link: #ed8762;
   --link-visited: #ff6a00;
   --link-hover: #f5a666;
 
@@ -155,9 +155,9 @@ header {
 
 /* TOC links */
 .toc a:link,
-.toc a:visited { color: #AD0028; }
+.toc a:visited { color: #650c0c; }
 .toc a:hover,
-.toc a:focus  { color: #91505f; }
+.toc a:focus  { color: #7e4d58; }
 
 /* TOC list keeps bullets */
 main nav[aria-label] ul { list-style: disc; }
@@ -213,8 +213,8 @@ figcaption {
   color: var(--footer-fg);
   padding: 1rem 1rem;
 }
-.page-footer a { color: #bfdbfe; }
-.page-footer a:hover { color: #93c5fd; }
+.page-footer a { color: #f05304; }
+.page-footer a:hover { color: #ec3c0b; }
 
 /* Centered media (About) */
 .centered-media { text-align: center; margin: 0 auto 1.25rem; }
@@ -306,4 +306,14 @@ html, body {
 #welcomeName {
   font-weight: 800;
   text-decoration: underline;
+}
+
+#assignmentLinks a:link,
+#assignmentLinks a:visited {
+    color: #253bdf;
+}
+
+#assignmentLinks a:hover,
+#assignmentLinks a:focus {
+    color: #4f6cff;
 }

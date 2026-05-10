@@ -1,5 +1,27 @@
-const visitorName = prompt("Hi there! May I know your name please?");
-alert("Welcome to my website, " + visitorName + "!");
+// Custom JavaScript function
+function setWelcomeName() {
+    const welcomeName = document.getElementById("welcomeName");
 
-document.getElementById("welcomeName").textContent = visitorName;
-console.log("Visitor name set to: " + visitorName);
+    if (welcomeName) {
+        welcomeName.textContent = "friend";
+        console.log("Welcome name has been set.");
+    }
+}
+
+$(document).ready(function () {
+    setWelcomeName();
+
+    $("#welcomeName").hover(
+        function () {
+            $(this).fadeOut("normal", "linear", function () {
+                $(this).text("Hand Picked Just for You").fadeIn("slow", "swing");
+            });
+        },
+
+        function () {
+            $(this).fadeOut("fast", "swing", function () {
+                $(this).text("friend").fadeIn("slow", "linear");
+            });
+        }
+    );
+});
